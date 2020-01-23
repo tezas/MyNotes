@@ -7,15 +7,15 @@ CREATE, DROP, ALTER
 Data Control Language: Statement for assigning permission.
 GRANT, REVOKE, DENY
 
-===========================================================================
+------------------------------------------------------------------------------
 
 Entity Relation:
 
 NORMALIZATION TERMS:
 
-Entity: formally a table
-Attribute: Description of an entity
-Primary Key: Unique identifier
+Entity: formally a table.
+Attribute: Description of an entity.
+Primary Key: Unique identifier.
 Composite Key: Multiple columns to make a unique key
 Candidate Key: All the unique keys which play candidates for a primary key | Primary key can only be one.
 Dependencies: one attribute being dependent on other unique key.
