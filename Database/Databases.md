@@ -1,3 +1,10 @@
+[Purpose of databases](https://www2.cs.sfu.ca/CourseCentral/354/han/material/notes/354notes-chapter1/node3.html)
+
+# E-R DIAGRAM
+
+![E-R](images/ER_Diagram.PNG)
+  ***
+
 > Database Manipulation Language : Statements for querying and modifying data.
 SELECT, UPDATE, INSERT, DELETE
 
@@ -31,22 +38,26 @@ We join the tables in order to provide the output of the queries frequently made
 # Normalization forms
 
 > 1. First Normal Form:
+
 * Attribute should have atomic value and must belong to same domain.
 
 > 2. Second normal forms:
+
 * Non key columns must not be dependent on part of the primary key or candidate key. | No Partially dependency.
 if AB->X then there shouldn't be any B->X or A->X.
 
 > 3. Third Normal Forms:
+
 * It should not have transitive dependency. 
 All attributes must be dependent only on the key. There shouldn't be any non key attriubute on which any other attribute would be dependent. | No Transitive dependency. 
 
-> 4. Boyce Codd Normal form:
-* For any dependeny X -> Y. X should be super key. 
+>4. Boyce Codd Normal form:
+
+* For any dependeny X -> Y. X should be super key.
 In other words, if there is a surrogate key which can also perform as primary key then all the columns must be dependent on that 
 key also.
 
----
+***
 
 > Functional Dependency:
 
@@ -59,3 +70,5 @@ Y is not dependent on X but X is dependent on Y.
 | 1   | 2   |
 | 1   | 3   |
 | 2   | 4   |
+
+***
