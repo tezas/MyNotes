@@ -7,9 +7,7 @@ CREATE, DROP, ALTER
 > Data Control Language: Statement for assigning permission.
 GRANT, REVOKE, DENY
 
-------------------------------------------------------------------------------
-
-Entity Relation:
+***
 
 > NORMALIZATION TERMS:
 
@@ -19,7 +17,8 @@ Entity Relation:
 * Composite Key: Multiple columns to make a unique key
 * Candidate Key: All the unique keys which play candidates for a primary key | Primary key can only be one.
 * Dependencies: one attribute being dependent on other unique key.
-------------------------------------------------------------------------------
+
+***
 
 > DENORMALIZATION:
 
@@ -27,9 +26,9 @@ Entity Relation:
 But for making queries daily on multiple tables makes it more difficult as there is extra processing to fetch data from multiple tables.
 We join the tables in order to provide the output of the queries frequently made.
 
-------------------------------------------------------------------------------
+***
 
-> Normalization forms
+# Normalization forms
 
 > 1. First Normal Form:
 * Attribute should have atomic value and must belong to same domain.
@@ -47,10 +46,15 @@ All attributes must be dependent only on the key. There shouldn't be any non key
 In other words, if there is a surrogate key which can also perform as primary key then all the columns must be dependent on that 
 key also.
 
+---
 
+> Functional Dependency:
 
+* If Y is Functionally dependent on X i.e., X->Y then X can uniquely identify Y means for any given value of X, value of Y will always remain same.
 
-
-
-
-
+Y is not dependent on X but X is dependent on Y.
+X | Y
+- |-
+1 | 2
+1 | 3
+2 | 4
