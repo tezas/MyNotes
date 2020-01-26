@@ -53,6 +53,7 @@ key also.
 * If Y is Functionally dependent on X i.e., X->Y then X can uniquely identify Y means for any given value of X, value of Y will always remain same.
 
 Y is not dependent on X but X is dependent on Y.
+
 | X   | Y   |
 | --- | --- |
 | 1   | 2   |
