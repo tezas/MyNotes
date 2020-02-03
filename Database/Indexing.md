@@ -41,7 +41,9 @@ Before moving ahead, Index file is always sorted irrespective of main file.
 
 * When indexing is done on non key attribute which means values can be repeat .
 * It can also be done only when main file is sorted.
+* There is an entry for every unique value in index file.
 * It is an example of sparse and dense indexing.
+[youtube Resource](https://www.youtube.com/watch?v=54gUz7QqE4o&list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV&index=48) 
 
 > Secondary Indexing
 
