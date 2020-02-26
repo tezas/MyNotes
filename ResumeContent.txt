@@ -1,0 +1,17 @@
+Resume content:
+
+* Design margin computation models to replicate negotiated agreement terms for clients' prime brokers
+* Implement workflow-driven UIs to reconcile margin figures and identify counter-party errors
+* Improve risk-return forecasting by designing sensitivity analysis for margin calculations
+TitleSoftware Engineer
+Full-time
+Dates EmployedJul 2016 – Dec 2018
+Employment Duration2 yrs 6 mos
+LocationHyderabad Area, India
+* Consolidated multiple Margin computation processes into one, resulting in massive performance gain, 
+using parallel computing in Perl language
+* Implemented workflow-driven UIs to reconcile margin figures and identify errors
+* Doubled reconciliation performance by designing complex differential analysis tools
+* Automated Profit and Loss Diff calculations in Portfolio Accounting team in Python
+* Wrote server-side APIs in Portfolio Data Warehousing system for data reporting
+* Eliminated major manual QA procedures by implementing end-to-end test suites
