@@ -29,3 +29,7 @@
 * It works with IP address.
 * Routing : Decides the route for sending the message over a network using different routing algorithm.
 * Fragmentation: If the message size is too large then intermediate node wouldn't be able to handle large message due its low capacity. So router breaks the message in multiple fragments.
+* Congestion control.
+
+### Transport layer
+
