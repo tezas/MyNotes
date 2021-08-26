@@ -1,4 +1,4 @@
-BASICS:
+# BASICS:
 * How to Fulfil the increased demand and requirements.
 1. Optimize the processes and inreaes throughput using only single resouce. | VERTICAL SCALING
 2. Optimizing processes : Preprocessing : Setting CRON jobs at non peak times.
