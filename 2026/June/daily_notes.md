@@ -1,5 +1,6 @@
 ## Day 1
 
+Source: https://interviewing.io/guides/system-design-interview
 * Interviewers seeks holistic view of users and system. In case of ambiguities always prioritise users. Technical details are important but they are to serve humans.
 * Read about multiple red and green flags during the interviews.
   * RED: Don't talk just for the sake for talking. That doesn't help at all and drains the interest of interviewer and your energy.
