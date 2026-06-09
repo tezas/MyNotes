@@ -51,4 +51,10 @@ Load balancer also supports
 * Helps eliminating overloading a specific server [Consistent hashing]
 
 #### Consistent Hashing
+Lets state the problem that we want to solve with this approach:
+When adding or removing nodes in a distributed cluster of servers we need shuffle the data on the basis of partition key distribution across the nodes. Consistent hashing reduces the percentage of data being shuffled from (n - 1) / n to ~1/n whle ensuring no server gets overloaded.
 
+* If we use hash key with modulo (i.e., hash(pk) % (number of nodes)) then on addition or removal of nodes the outcome of hash also changes. With this technique it impacts 90% of data shuffling.
+* To solve this, we consider nodes to be distributed at a ring where hash(node) creates a position in a ring and then data with pk also assigned a hash on a ring which. Then the data is being allocated to nearest clockwise neighbouring node. With this approach any addition/removal impacts a small sector in a ring to shift from one neighbor to another.
+* But the above approach can lead to overloading specific node. For this problem, virtual nodes are being created and assigned multiple positions on ring. With this data is always uniformly distributed across different nodes.
+* Node discovery generally happens using gossip protocol where nodes communicate with other nodes about the state understanding that they have about the cluster and then those node gossip with others.
