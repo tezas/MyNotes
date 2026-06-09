@@ -35,5 +35,20 @@ Types of caching:
  
 #### Load Balancer
 There are 2 load balancers:
-1. At Layer 4, which takes care of routing the data at transport layer and only has the information about destination and source. Also called as Network load balancer. Its not aware of the data packets being transmitted. 
-2. At later 7, This is application load balancer and takes the routing decision on the basis of which worker is busy and what data is being transmitted. 
+1. At Layer 4, which takes care of routing the data at transport layer and only has the information about destination and source. Also called as Network load balancer. Its not aware of the data packets being transmitted. [Generally, this involves the source, destination IP addresses, and ports in the header, but not the contents of the packet]
+2. At later 7, This is application load balancer and takes the routing decision on the basis of which worker is busy and what data is being transmitted. They terminate network traffic.
+
+Routing techniques
+* Random
+* Round robin
+* Sticky session based on cookies
+* Least busy worker
+
+Load balancer also supports
+* session storage
+* Health checks of servers
+* Descrypting SSL / SSL Termination
+* Helps eliminating overloading a specific server [Consistent hashing]
+
+#### Consistent Hashing
+
