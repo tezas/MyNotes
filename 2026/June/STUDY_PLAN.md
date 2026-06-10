@@ -14,8 +14,8 @@ Aim for ~1.5–2 hours/day. Each week has a theme.
 |-----|-------|-----------|-----------------|
 | 1 | Interview framework & delivery | `14` | [Interviewing.io System Design Guide](https://interviewing.io/guides/system-design-interview) (free, 4-part guide with "Don't say / Do say" examples); [Hello Interview "In a Hurry"](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) (free, created by Meta/Amazon hiring managers) |
 | 2 | Load balancing, caching | `03`, `04` | [System Design Primer — Load Balancing](https://github.com/donnemartin/system-design-primer#load-balancer) (L4/L7, algorithms); [System Design Primer — Caching](https://github.com/donnemartin/system-design-primer#cache) (cache-aside, write-through, write-behind, refresh-ahead) |
-| 3 | Sharding, indexes, consistent hashing | `05`, `06`, `12` | DDIA Ch. 6 (Partitioning) — deepest treatment of range vs hash partitioning and rebalancing; [System Design Primer — Consistent Hashing](https://github.com/donnemartin/system-design-primer#under-development) |
-| 4 | CAP theorem, SQL vs NoSQL | `11`, `10` | DDIA Ch. 5 & 9 (Replication + Consistency & Consensus) — goes beyond CAP to PACELC; [ByteByteGo — SQL vs NoSQL visual](https://bytebytego.com/) |
+| 3 | Sharding, indexes, consistent hashing | `05`, `06`, `12` | DDIA Ch. 6 (Partitioning) — deepest treatment of range vs hash partitioning and rebalancing; [Hello Interview — Consistent Hashing](https://www.hellointerview.com/learn/system-design/deep-dives/consistent-hashing) (hash ring, virtual nodes, hot spots, real-world usage in Cassandra/DynamoDB) |
+| 4 | CAP theorem, SQL vs NoSQL | `11`, `10` | DDIA Ch. 5 & 9 (Replication + Consistency & Consensus) — goes beyond CAP to PACELC; [Hello Interview — CAP Theorem](https://www.hellointerview.com/learn/system-design/deep-dives/cap-theorem) (when to choose C vs A, with examples); [System Design Primer — SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql) (decision criteria + database types) |
 | 5 | Queues, redundancy/replication | `08`, `09` | DDIA Ch. 11 (Stream Processing) — Kafka, event sourcing, exactly-once semantics; [LinkedIn — "The Log: What Every Software Engineer Should Know"](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) |
 | 6 | Proxies, long-polling/WebSockets/SSE | `07`, `13` | [System Design Primer — Communication](https://github.com/donnemartin/system-design-primer#communication) (HTTP, TCP, UDP, RPC, REST, WebSockets) |
 | 7 | **Practice:** Design a URL shortener end-to-end in 35 min (then compare with `15` and Alex Xu Vol. 1 chapter) | |
@@ -43,7 +43,7 @@ Aim for ~1.5–2 hours/day. Each week has a theme.
 
 | Resource | Why |
 |----------|-----|
-| [Redis University — Introduction to Redis](https://university.redis.io/) | Free official course, interactive exercises |
+| [Redis University — "Get started with Redis"](https://redis.io/dev/) | Free official courses + tutorials (Dev Hub). 3-hour intro learning path |
 | [Redis Internals Documentation](https://redis.io/docs/latest/operate/oss_and_stack/reference/internals/) | How hash tables resize, how sorted sets use skip lists + zip lists |
 | [ByteByteGo — "Redis Explained"](https://bytebytego.com/) | Visual architecture overview |
 | [Antirez (Salvatore Sanfilippo) blog](http://antirez.com/) | Creator's design decisions: why skip lists over balanced trees, Redlock controversy |
@@ -146,12 +146,12 @@ Example:
 
 | Day | System | Local File | External Sources |
 |-----|--------|-----------|-----------------|
-| 1 | URL Shortener | `15` | Alex Xu Vol. 1 (URL shortener chapter); [Hello Interview — Bitly](https://www.hellointerview.com/) (free); [System Design Primer — Pastebin](https://github.com/donnemartin/system-design-primer#design-pastebincom) |
-| 2 | Twitter / News Feed | `20`, `26` | Alex Xu Vol. 1 (News Feed chapter); [Hello Interview — FB News Feed](https://www.hellointerview.com/) (free); [System Design Primer — Twitter timeline](https://github.com/donnemartin/system-design-primer#design-the-twitter-timeline-and-search) |
+| 1 | URL Shortener | `15` | Alex Xu Vol. 1 (URL shortener chapter); [Hello Interview — Bitly](https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly) (free); [System Design Primer — Pastebin](https://github.com/donnemartin/system-design-primer#design-pastebincom-or-bitly) |
+| 2 | Twitter / News Feed | `20`, `26` | Alex Xu Vol. 1 (News Feed chapter); [Hello Interview — FB News Feed](https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed) (free); [System Design Primer — Twitter timeline](https://github.com/donnemartin/system-design-primer#design-the-twitter-timeline-and-search-or-facebook-feed-and-search) |
 | 3 | Instagram / Photo Sharing | `17` | Grokking Modern SDI (updated Instagram design); Alex Xu Vol. 1; [Meta Engineering Blog](https://engineering.fb.com/) — search for photo infrastructure posts |
-| 4 | Messenger / Chat | `19` | [Hello Interview — WhatsApp](https://www.hellointerview.com/) (free); Meta Engineering Blog — "Facebook Messenger Optimisations" (real production insights on NYE scaling); DDIA Ch. 11 for message ordering guarantees |
-| 5 | Dropbox / File Storage | `18` | [Hello Interview — Dropbox](https://www.hellointerview.com/) (free); Alex Xu Vol. 2 (Google Drive chapter) |
-| 6 | YouTube / Netflix | `21` | [Netflix Tech Blog](https://netflixtechblog.com/) — "Video Encoding at Scale," "Shot-based Encoding"; [Hello Interview — YouTube](https://www.hellointerview.com/) (free); Alex Xu Vol. 1 |
+| 4 | Messenger / Chat | `19` | [Hello Interview — WhatsApp](https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp) (free); Meta Engineering Blog — "Facebook Messenger Optimisations" (real production insights on NYE scaling); DDIA Ch. 11 for message ordering guarantees |
+| 5 | Dropbox / File Storage | `18` | [Hello Interview — Dropbox](https://www.hellointerview.com/learn/system-design/problem-breakdowns/dropbox) (free); Alex Xu Vol. 2 (Google Drive chapter) |
+| 6 | YouTube / Netflix | `21` | [Netflix Tech Blog](https://netflixtechblog.com/) — "Video Encoding at Scale," "Shot-based Encoding"; [Hello Interview — YouTube](https://www.hellointerview.com/learn/system-design/problem-breakdowns/youtube) (free); Alex Xu Vol. 1 |
 | 7 | **Mock interview:** Pick one design, talk through it aloud in 35 min | Use [Pramp](https://www.pramp.com/) (free peer mock) or record yourself |
 
 **After each design, write down:**
@@ -175,10 +175,10 @@ Example:
 |-----|--------|-----------|-----------------|-----------------|
 | 1 | Rate Limiter | `23` | Alex Xu Vol. 1 (progresses through algorithms to distributed environments); Cloudflare blog on rate limiting; [Uber's Go rate limiter](https://github.com/uber-go/ratelimit); Martin Fowler — Circuit Breaker pattern | Sliding window vs token bucket, distributed rate limiting with Redis INCR |
 | 2 | Typeahead / Autocomplete | `22` | Alex Xu Vol. 1 (search autocomplete); Grokking SDI typeahead chapter | Trie vs Elasticsearch prefix queries, ranking freshness vs popularity |
-| 3 | Web Crawler | `25` | Alex Xu Vol. 1 (web crawler); [Hello Interview — Web Crawler](https://www.hellointerview.com/) (free); [System Design Primer — Web Crawler](https://github.com/donnemartin/system-design-primer) | Politeness, dedup (URL + content), Kafka as URL frontier |
-| 4 | Twitter Search | `24` | [System Design Primer — Twitter Search](https://github.com/donnemartin/system-design-primer#design-the-twitter-timeline-and-search); Elasticsearch/Lucene architecture docs | Inverted index (ES), real-time indexing, sharding strategy |
-| 5 | Uber Backend | `28` | [Uber Engineering Blog](https://www.uber.com/blog/engineering/) — delivery search platform, real-time traffic forecasting; [Hello Interview — Uber](https://www.hellointerview.com/) (free); Google S2 library docs for geospatial | Geospatial indexing (quad-tree, geohash, S2 cells), dispatch, ETA |
-| 6 | Yelp / Nearby | `27` | Google S2 Library documentation (geometry, cells, Hilbert curves); [Hello Interview — Yelp](https://www.hellointerview.com/) | Quad-tree, geohash, proximity search at scale |
+| 3 | Web Crawler | `25` | Alex Xu Vol. 1 (web crawler); [Hello Interview — Web Crawler](https://www.hellointerview.com/learn/system-design/problem-breakdowns/web-crawler) (free); [System Design Primer — Web Crawler](https://github.com/donnemartin/system-design-primer#design-a-web-crawler) | Politeness, dedup (URL + content), Kafka as URL frontier |
+| 4 | Twitter Search | `24` | [System Design Primer — Twitter Search](https://github.com/donnemartin/system-design-primer#design-the-twitter-timeline-and-search-or-facebook-feed-and-search); Elasticsearch/Lucene architecture docs | Inverted index (ES), real-time indexing, sharding strategy |
+| 5 | Uber Backend | `28` | [Uber Engineering Blog](https://www.uber.com/blog/engineering/) — delivery search platform, real-time traffic forecasting; [Hello Interview — Uber](https://www.hellointerview.com/learn/system-design/problem-breakdowns/uber) (free); Google S2 library docs for geospatial | Geospatial indexing (quad-tree, geohash, S2 cells), dispatch, ETA |
+| 6 | Yelp / Nearby | `27` | Google S2 Library documentation (geometry, cells, Hilbert curves); [Hello Interview — Yelp](https://www.hellointerview.com/learn/system-design/problem-breakdowns/yelp) | Quad-tree, geohash, proximity search at scale |
 | 7 | **Mock interview:** Unseen prompt, 45 min | [Interviewing.io](https://interviewing.io/) (paid, with actual FAANG interviewers) or [Pramp](https://www.pramp.com/) (free) |
 
 **L5+ differentiators to practice:**
@@ -196,7 +196,7 @@ Example:
 | Day | Activity | Resources |
 |-----|----------|-----------|
 | 1 | Re-do your weakest design from Week 3 with stricter time (35 min) | Compare against engineering blog for that system |
-| 2 | Google Docs / Collaborative editing (unseen) | OT vs CRDT — search "Operational Transformation" and "CRDTs for real-time collaboration"; [Hello Interview — Google Docs](https://www.hellointerview.com/) |
+| 2 | Google Docs / Collaborative editing (unseen) | OT vs CRDT — search "Operational Transformation" and "CRDTs for real-time collaboration"; [Hello Interview — Google Docs](https://www.hellointerview.com/learn/system-design/problem-breakdowns/google-docs) |
 | 3 | Payment system (unseen — focus on idempotency, exactly-once) | [Airbnb Engineering — "Avoiding Double Payments in a Distributed Payments System"](https://medium.com/airbnb-engineering); Alex Xu Vol. 2 |
 | 4 | Full mock interview #1 — 45 min | [Pramp](https://www.pramp.com/) or [Exponent](https://www.tryexponent.com/) (peer matching by level) |
 | 5 | Review mock feedback, drill weak spots | Re-read relevant DDIA chapters for depth |
@@ -341,7 +341,7 @@ These are bonus topics to study if you have extra time, or to slot in on lighter
 
 | Resource | Why |
 |----------|-----|
-| [Spark: The Definitive Guide (free chapters on Databricks)](https://www.databricks.com/resources/ebook/spark-definitive-guide) | Comprehensive, covers both batch and streaming |
+| [Apache Spark Documentation — Overview & Programming Guides](https://spark.apache.org/docs/latest/) | Official docs covering RDDs, DataFrames, Spark SQL, and Structured Streaming. (Book: *Spark: The Definitive Guide* if you want a deeper read) |
 | [Flink Training (official Apache)](https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/overview/) | Hands-on exercises covering event time, watermarks, state, checkpoints |
 | DDIA Ch. 10 (Batch Processing) + Ch. 11 (Stream Processing) | MapReduce → Spark lineage, exactly-once semantics, stream-table duality |
 | [Netflix — "Keystone Real-Time Stream Processing Platform"](https://netflixtechblog.com/) | How Netflix processes trillions of events/day |
