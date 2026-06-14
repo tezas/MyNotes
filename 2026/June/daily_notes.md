@@ -87,3 +87,12 @@ Sometimes its not purely consistency vs Latency. Like Cassandra provides operari
   - W=1, R=3  →  CP, fast writes, slow/fragile reads
 
 ### SQL vs NO-SQL
+- SQL only supports structured data. It can enforce constraints on data which helps in data integrity at each field level. 
+- NO-SQL supports un-structures data. This can be helpful when we are not aware of the data format or want to keep flexibility on fields. Each document can follow different fields.
+
+- SQL supports ACID properties on every operation. They achieve atomicity using transactions.
+
+- SQL can support complex adhoc queries spanning across multiple tables.
+- NO-SQL is used for known access patterns.
+
+- 
