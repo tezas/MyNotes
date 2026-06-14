@@ -32,6 +32,13 @@ Types of caching:
   * Query level data
   * serialised object
   * Rendered HTML
+
+ ##### Caches Updation/Eviction policy
+ Cache has limited memory and its more expensive compared to databases, hence we need to think about how we can update and evict the data in cache.
+ Following are the different techniques to update and evict data from the cache:
+ 1. Cache Aside / Lazy Loading -> If there is a cache miss then application fetches from DB and update cache.
+ 2. Write through: First write to cache and then to DB. This happens synchronously. Write becomes slower but reads are faster.
+ 3. Write Behind: Write to CACHE syncronously and fork async write for DB.
  
 #### Load Balancer
 There are 2 load balancers:
