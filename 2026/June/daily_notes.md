@@ -13,14 +13,14 @@ Source: https://interviewing.io/guides/system-design-interview
   * GREEN: You tend to collect your thought before show-casing them.
   * GREEN: You don't just provide options but take decision to go with an option with an informed decision.
 
-### Day 2
+## Day 2
 System design can be broken down in these following steps:
 * **Problem Navigation**: Here you can show case the skill of breaking down the problem in smaller pieces and navigate through the pieces gracefully. Initially the problem is under specified and getting the clarity and creating a roadmap for the problem is important.
 *  **Solution Desigfn**: Here we go through each smaller piece and try to solve them with Core Concepts of technology. You should be able to explain how you're solving these smaller pieves.
 *  **Technical Excellence**: You must be aware of the new age technologies which apply to the solution. We can always leverage the benfit of the new tech. We cannot keep using the old tech here and need to keep up with the trends. You should be able to explain the standard patterns and inspirations taken from existing technology or reusing them.
 *  **Communication**: This is a very important skill for a staff level engineer. It should feel like a collaboration then an interview. You need to identify the battles wisely. There would be some concepts that you can avoid go in deep as they are straightforward and discuss more about the more complex problems. 
 
-### Day 3
+## Day 3
 #### Caching
 Types of caching:
 * **Client side**: browser caches the data. Session cookies
@@ -65,3 +65,16 @@ When adding or removing nodes in a distributed cluster of servers we need shuffl
 * To solve this, we consider nodes to be distributed at a ring where hash(node) creates a position in a ring and then data with pk also assigned a hash on a ring which. Then the data is being allocated to nearest clockwise neighbouring node. With this approach any addition/removal impacts a small sector in a ring to shift from one neighbor to another.
 * But the above approach can lead to overloading specific node. For this problem, virtual nodes are being created and assigned multiple positions on ring. With this data is always uniformly distributed across different nodes.
 * Node discovery generally happens using gossip protocol where nodes communicate with other nodes about the state understanding that they have about the cluster and then those node gossip with others.
+
+## Day 4 
+### CAP Theorem
+In CAP, Consistency, Avalability and Partition Tolerance. Partition Tolerance is not a choice in a real distributed system. There can be unseen states where network break can occur between the 2 nodes.
+So CAP theorem answers the dilemma in case of Partition between C & A and states that a real distributed system can only achieve either CP or AP state.
+
+The complete flow is PACELC:
+In case of Partition choose either A or C. Else choose L(Latency) or C(Consistency).
+
+Different systems offer different setting:
+DynamoDB/Cassandara: AP/L
+SQL/RDS: CP/C
+MongoDB: CP/C
