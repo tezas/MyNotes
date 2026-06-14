@@ -78,3 +78,12 @@ Different systems offer different setting:
 DynamoDB/Cassandara: AP/L
 SQL/RDS: CP/C
 MongoDB: CP/C
+
+Sometimes its not purely consistency vs Latency. Like Cassandra provides operarion level consistency based on W + R > N where N is no. of nodes, w is numbers of nodes acknowledging before commiting the write and R means reads from number of nodes.  This is also called Quorom. 
+
+  - W=1, R=1  →  AP / low-latency  (stale reads OK — like a like-counter)
+  - W=2, R=2  →  CP / strong       (read-your-writes — like inventory)
+  - W=3, R=1  →  CP, fast reads, slow/fragile writes 
+  - W=1, R=3  →  CP, fast writes, slow/fragile reads
+
+### SQL vs NO-SQL
