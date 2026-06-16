@@ -95,4 +95,7 @@ Sometimes its not purely consistency vs Latency. Like Cassandra provides operari
 - SQL can support complex adhoc queries spanning across multiple tables.
 - NO-SQL is used for known access patterns.
 
-- 
+Decision Points:
+* Main driving decision between SQL / NO-SQL is the access pattern. If we know the access pattern then we can utilise NoSQL. Although there can be a case where we might need polyglot persistence layer where different types of data is being stored in different databases.
+* We can also think about if we need atomicity between multiple types of data. DynamoDB support transactions but it has its own limitations. We have to take care of concurrency and race conditions.
+* SQL buys you, The ability to enforce correctness invariants across multiple records, under concurrent access, automatically — via multi-record atomicity + serializable isolation + declarative constraints.
