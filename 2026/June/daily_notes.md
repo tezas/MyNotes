@@ -103,3 +103,11 @@ Decision Points:
 **Key Points**
 *  A single-item conditional write enforces a single-item invariant. A transaction enforces a multi-item invariant.
 *  By having constraints on table SQL is able ot maintain referential integrity which ensure the consistency. This invariant is the biggest win SQL has over NoSQL.
+
+## Day 5
+### Distributed transactions
+
+
+
+## OPEN QUERIES
+1. What does exactly W + R > N mean? Is it applied during the cluster setup?
