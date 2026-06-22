@@ -21,6 +21,30 @@ Price per Earning ratio : Price of a stock / (Earnings per share)
 #### Growth
 Since P/E is unable to determine the performance of the stock, we take "Growth" into consideration. High price can only be justified by the growth. Hence we check PEG ratio.
 
+#### ROE
+Return on Equity: For every 100₹ how much profit an investor is getting.  = ( Net Profit * 100 ) / Equity amount.
+
+#### ROCE
+Return on Capital Employed: O
+
+#### Gross Margin / Operating Margin
+Gross Margin = Revenue - Cost Of goods (COGs) / Revenue
+
+#### Debt / Equity
+
+#### Operating Margin
+Operating Margin = (Revenue - COGs - running costs ) / Revenue
+
+#### Net Profit
+Net Profit = (Operating profit - Taxes - Debts) / Revenue
+
+#### Operating Cash Flow (OCF)
+Cash the core business generates from its operations.
+
+#### Free Cash Flow
+the cash left after the company spends on maintaining/growing its assets (capex = factories, equipment)
+FCF = OCF - Capex Expenditure
+
 **Things to Note:**
 - PEG ~= 1 is near ideal ratio as price is justified by growth but if P/E is lower then growth is also lower . So we shouldn't consider PEG alone.
 - Check historical P/E of the company.
