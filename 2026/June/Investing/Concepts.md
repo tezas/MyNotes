@@ -80,3 +80,9 @@ The core idea: Semiconductor companies design and/or manufacture chips. Three tr
 2. R&D-intensive — they must constantly invent the next generation or die.
 3. Pricing power varies hugely — a cutting-edge chip commands fat margins; a commodity chip doesn't.
 
+**Notes**
+- For cyclicals P/E signal is inverted and is unreliable.
+- Gross margin: This is an important factor in Semiconductors.
+- R & D spends should be high and healthy.
+
+**Advice**: For semis, gross margin reveals the moat, R&D sustains it, and the cycle dictates timing — so never trust a single-year P/E; value on normalized earnings.
