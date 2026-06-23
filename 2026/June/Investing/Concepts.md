@@ -54,3 +54,29 @@ FCF = OCF - Capex Expenditure
 - ROE: Is this a good return to me. ROE > ROCE means company is taking loans wisely to generate returns.
 - For banks ROCE is useless as loans are their raw material.
 
+
+## SECTOR BASED ANALYSIS
+
+### BANK
+ A bank's product is money. It takes your deposits (cheaply) and lends them out (at higher rates). Because of this, the normal rules break:
+
+**IGNORE**
+1. P/E 
+2. D/E
+3. ROCE
+
+**Specific Metrics**
+1. (Net Interest Margin = Interest earned - Interest Paid) / assets
+2. NPAs : % of loans where lenders stopped repaying.
+3. CASA Ratio: % of deposits sitting in low cost current/ saving accounts.
+4. ROA: Net Profit / Total Assets
+5. CAR (Capital Adequacy Ratio) = capital / risk weighted assets
+6. P/B
+
+### SEMICONDUCTOR
+The core idea: Semiconductor companies design and/or manufacture chips. Three traits define how you analyze them:
+
+1. Cyclical — demand swings in boom-and-bust waves (chips glut → shortage → glut).
+2. R&D-intensive — they must constantly invent the next generation or die.
+3. Pricing power varies hugely — a cutting-edge chip commands fat margins; a commodity chip doesn't.
+
