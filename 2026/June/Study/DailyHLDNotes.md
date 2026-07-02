@@ -106,7 +106,14 @@ Decision Points:
 
 ## Day 5
 ### Distributed transactions
+It includes 2 problems:
+1. How to perform updates on different entities spanning across different nodes and cluster. Example: In a transaction we need to touch inventory -> order -> invoice -> payment.
+2. How to keep consistency across multiple replicas for a given entity.
 
+For 1, we have mainly 2 solutions:
+1. 2PC [2 Phase commit Blog](https://medium.com/@aravindcsebe/understanding-2-phase-commit-protocol-in-distributed-transactions-d97efb5caa39): It is controlled by transaction coordinator node which : 
+        a) Prepare Phase: All nodes acknowledge for the writes. Each entity persist the writes in log, locks the record in action and acknowledge their availability/unavailability.
+        b) Commit Phase: If all entities are available then coordinator ask all entitires to perform write operation and commit.
 
 
 ## OPEN QUERIES
