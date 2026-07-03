@@ -111,9 +111,17 @@ It includes 2 problems:
 2. How to keep consistency across multiple replicas for a given entity.
 
 For 1, we have mainly 2 solutions:
-1. 2PC [2 Phase commit Blog](https://medium.com/@aravindcsebe/understanding-2-phase-commit-protocol-in-distributed-transactions-d97efb5caa39): It is controlled by transaction coordinator node which : 
-        a) Prepare Phase: All nodes acknowledge for the writes. Each entity persist the writes in log, locks the record in action and acknowledge their availability/unavailability.
+1. 2PC [2 Phase commit Blog](https://medium.com/@aravindcsebe/understanding-2-phase-commit-protocol-in-distributed-transactions-d97efb5caa39): It is controlled by transaction coordinator node which : <br/>
+        a) Prepare Phase: All nodes acknowledge for the writes. Each entity persist the writes in log, locks the record in action and acknowledge their availability/unavailability.<br/>
         b) Commit Phase: If all entities are available then coordinator ask all entitires to perform write operation and commit.
+   **Pros**: It maintains strong consistency.
+   **Cons**: If coordinator fails in between phase 1 and phase 2 then indefinte locks can remain on participants as they don't listen back from Coordinator.
+3. Saga: This prioritises latency and availability over strong consistency and hence its eventually consistent. This can be executed in 2 ways: <br/>
+        a) *Orchestrator:* When a coordinator executes the operations on different entities in a transaction. This node executes command in sequence and maintains the state of execution. In case of failure orchestrator is                responsible for executing compensating commands.<br/>
+        b) *Choreography:* When one entity communicates about the execution to another in sequence to trigger subsequent action through events. This is decentralised and also solve dual write problem as state of execution               is being maintained by the entity it self. The failures can be solve either by rollback or retry.
+  
+   
+
 
 
 ## OPEN QUERIES
