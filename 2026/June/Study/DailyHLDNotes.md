@@ -121,6 +121,9 @@ For 1, we have mainly 2 solutions:
         b) *Choreography:* When one entity communicates about the execution to another in sequence to trigger subsequent action through events. This is decentralised and also solve dual write problem as state of execution               is being maintained by the entity it self. The failures can be solve either by rollback or retry.
   
    
+## Day 6
+
+### RAFT
 
 
 
