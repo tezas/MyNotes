@@ -19,3 +19,12 @@
 2. For APM Integration, we needed to perform backfill for existing connectivity. At the time of launch it was already performed but there was a timeline issue as between completion of backfill and launch, days were spent in which some sites created new data which needed another iteration of backfill. This came as a surprise in last minute and pushed the launch needed to another day.
 3. On another thread, while performing the App release which had some final changes needed for new features, we deployed the changes to production unintentionally for [pilot sites for ISO V2]. This created some churn which could have been avoided. I am planning to write a retrospective document on the App release to ensure this doesn't repeat.
 4. All features were hidden behind feature gate at UI and backend. We noticed while deploying the changes in production it took 30 minutes for each profile and it was deploying in sequential. [How did we realise it?: When we saw that profile for frontend is enabled we started testing which was showing the new features on UI but backend feature flag was not enabled because of which frontend was throwing error for the meantime.] There fore we took an action item to segregate the frontend and backend separately and then deploy as in a single environment deployment.
+
+
+## Auth Migration Design
+
+While first design review, I got following feedback:
+1. If ambiguity, I could have come up with short term and long term recommendation. [Not necessary to suggest one solution]
+2. I didn't have the strong justification and evidence for one of the requirements which brought multiple questions on requirement.
+3. T shirt size estimates must be there, if timeline is a driving factor. Even in ambiguity, the timeline estimates help to evaluate between long term and short term solution.
+4. Risk analysis for proposed solution when timeline is in question. [What if timeline is missed?]
