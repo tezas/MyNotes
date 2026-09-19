@@ -26,6 +26,11 @@
 5. Best optimisation, as we are eventual consistent: every limiter instance writes data in memory and async in shared cache.
 
 
+## HLD
+### Needs imporovement
+<img width="376" height="404" alt="image" src="https://github.com/user-attachments/assets/dc7788d1-fe67-4f2b-8d8f-b524f1546a0c" />
+
+
 ## Question:
 1. What are the issues with sticky seccions? => a. It can create contention points.
 
