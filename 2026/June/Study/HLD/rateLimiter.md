@@ -51,5 +51,6 @@
 ### Action item:
 1. Read about redis. [Sharding, On premise, How clusters work]
 2. How to mention connection pooling to optimise on latency.
+3. Read on what are the best ways to reduce latencies. [regions, connection pool, sticky sessions
    
 
