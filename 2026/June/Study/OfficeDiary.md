@@ -28,3 +28,8 @@ While first design review, I got following feedback:
 2. I didn't have the strong justification and evidence for one of the requirements which brought multiple questions on requirement.
 3. T shirt size estimates must be there, if timeline is a driving factor. Even in ambiguity, the timeline estimates help to evaluate between long term and short term solution.
 4. Risk analysis for proposed solution when timeline is in question. [What if timeline is missed?]
+
+
+## Operational Excellence
+
+1. Minibrain was taking higher time during training and classification after a new python library version was pushed in pipeline. Changed the code in pipeline to optimise the way its being compiled through the java code. [TODO: Check this as a story].
