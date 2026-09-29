@@ -33,3 +33,4 @@ While first design review, I got following feedback:
 ## Operational Excellence
 
 1. Minibrain was taking higher time during training and classification after a new python library version was pushed in pipeline. Changed the code in pipeline to optimise the way its being compiled through the java code. [TODO: Check this as a story].
+2. Faced a throttling issue where client canary call spiked to double which resulted in burst requests during deployment. Root cause: During deployment since we have configured minHealthyInstances as 2, for a certain amount of time there were 4 instances are up and later 2 older instances were shut down.
